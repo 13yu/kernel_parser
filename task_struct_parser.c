@@ -435,7 +435,15 @@ int main(int argc, char *argv[])
     ji_curr = &(ji_p->gtime);
     ji_field_offset = ji_curr - ji_start;
     ji_json_out("gtime", ji_struct_byte, ji_field_offset, ji_field_size);
+    printf(",");
 
+
+
+
+    ji_field_size = sizeof(struct css_set *);
+    ji_curr = &(ji_p->cgroups);
+    ji_field_offset = ji_curr - ji_start;
+    ji_json_out("cgroups", ji_struct_byte, ji_field_offset, ji_field_size);
 
 
 
